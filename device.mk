@@ -84,3 +84,11 @@ PRODUCT_PACKAGES += \
 # OEM otacerts
 PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(LOCAL_PATH)/security/infinix
+
+# Enable Framework Overlays
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_COPY_FILES += \
+    device/infinix/X6812/prebuilt/kernel:kernel \
+    device/infinix/X6812/prebuilt/fstab.mt6768:recovery/root/first_stage_ramdisk/fstab.mt6768 \
+    device/infinix/X6812/recovery/root/init.recovery.mt6768.rc:root/init.recovery.mt6768.rc \
+    device/infinix/X6812/recovery/root/init.microtrust.rc:root/init.microtrust.rc

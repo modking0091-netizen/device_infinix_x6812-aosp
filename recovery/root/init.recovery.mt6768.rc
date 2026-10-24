@@ -11,7 +11,7 @@ on fs
     mkdir /mnt/vendor/nvcfg 0700 root root
     mkdir /mnt/vendor/persist 0700 root root
 
-    install_keyring
+   # install_keyring
 
 service keystore_auth /system/bin/keystore_auth
     user system
