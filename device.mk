@@ -11,23 +11,13 @@ LOCAL_PATH := device/infinix/X6812
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
-    gz \
-    lk \
-    logo \
-    md1img \
-    preloader \
     product \
-    scp \
-    spmfw \
-    sspm \
     system \
     system_ext \
-    tee \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor \
     vendor \
-    vendor_boot
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -92,3 +82,6 @@ PRODUCT_COPY_FILES += \
     device/infinix/X6812/prebuilt/fstab.mt6768:recovery/root/first_stage_ramdisk/fstab.mt6768 \
     device/infinix/X6812/recovery/root/init.recovery.mt6768.rc:root/init.recovery.mt6768.rc \
     device/infinix/X6812/recovery/root/init.microtrust.rc:root/init.microtrust.rc
+
+# Google Mobile Services
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)

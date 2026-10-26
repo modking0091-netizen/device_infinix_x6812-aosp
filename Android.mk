@@ -9,4 +9,9 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),X6812)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
+
+$(PRODUCT_OUT)/dtb.img: $(LOCAL_PATH)/prebuilt/dtb.img
+	$(hide) mkdir -p $(dir $@)
+	$(hide) cp -f $< $@
+
 endif

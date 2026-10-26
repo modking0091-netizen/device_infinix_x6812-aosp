@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Bind directly to the MTK IMS package -->
+    <string name="config_ims_package" translatable="false">com.mediatek.ims</string>
+
+    <!-- Dynamic binding required for Android 11 HIDL radio -->
+    <bool name="config_dynamic_bind_ims">true</bool>
+
+    <!-- Enable cellular IMS calling capabilities -->
+    <bool name="config_device_volte_available">true</bool>
+    <bool name="config_device_vt_available">true</bool>
+    <bool name="config_device_wfc_ims_available">true</bool>
+
+    <!-- Ensure mobile data remains functional during voice/IMS calls -->
+    <bool name="config_voice_capable">true</bool>
+    <bool name="config_sms_capable">true</bool>
+</resources>

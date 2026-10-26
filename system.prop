@@ -4,3 +4,21 @@ ro.mtk_microtrust_tee_support=1
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.hardware.kmsetkey=beanpod
 ro.hardware.gatekeeper=beanpod
+
+# Telephony / Radio
+ro.telephony.default_network=9,9
+ro.telephony.sim.slots.count=2
+persist.radio.multisim.config=dsds
+ril.telephony.mode=4
+
+# MediaTek IMS / VoLTE
+persist.vendor.radio.mtk_ims_support=1
+persist.vendor.radio.volte.enable=1
+persist.vendor.radio.wfc.enable=1
+persist.vendor.radio.mims_support=2
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# Ensure UI identifies as standard phone
+ro.build.characteristics=default
